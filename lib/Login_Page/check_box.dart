@@ -14,22 +14,24 @@ class _CheckBoxState extends State<CheckBox> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Checkbox(
-          value: checkbox,
-          onChanged: (val) {
-            setState(() {
-              checkbox = val!;
-            });
-          },
-          activeColor: Colors.blue,
-        ),
-        const Text(
-          "Remember me",
-          style: TextStyle(color: Colors.black, fontSize: 15),
-        ),
-        const SizedBox(
-          width: 10,
+        Row(
+          children: [
+            Checkbox(
+              value: checkbox,
+              onChanged: (val) {
+                setState(() {
+                  checkbox = val!;
+                });
+              },
+              activeColor: Colors.blue,
+            ),
+            const Text(
+              "Remember me",
+              style: TextStyle(color: Colors.black, fontSize: 15),
+            ),
+          ],
         ),
         TextButton(
           onPressed: () {},
