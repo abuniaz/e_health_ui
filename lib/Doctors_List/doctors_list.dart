@@ -8,22 +8,28 @@ class DoctorsHome extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const Text(
-            'Please Select a Department',
-            style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+          const Center(
+            child: Text(
+              'Please Select a Department',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+            ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Container(
-            height: 50,
-            width: 300,
-            color: Colors.white70,
-            child: TextFormField(
-              decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  hintText: 'Search Department'),
+          Center(
+            child: Container(
+              height: 50,
+              width: 300,
+              color: Colors.white70,
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    prefixIcon: Icon(Icons.search),
+                    hintText: 'Search Department'),
+              ),
             ),
           )
         ],
