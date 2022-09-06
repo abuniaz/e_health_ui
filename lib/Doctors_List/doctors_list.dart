@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:health_care/Doctors_List/categories.dart';
-import 'package:health_care/Doctors_List/search_bar.dart';
 
 class DoctorsHome extends StatelessWidget {
   const DoctorsHome({Key? key}) : super(key: key);
@@ -8,24 +6,27 @@ class DoctorsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Doctors List',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-        backgroundColor: Colors.blueGrey,
-      ),
-      body: Container(
-        color: Colors.blueGrey,
-        child: ListView(
-          children: const [
-            SizedBox(
-              height: 40,
+      body: Column(
+        children: [
+          const Text(
+            'Please Select a Department',
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 50,
+            width: 300,
+            color: Colors.white70,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: 'Search Department'),
             ),
-            SearchBar(),
-            Categories()
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
