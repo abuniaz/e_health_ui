@@ -44,17 +44,47 @@ class DoctorsHome extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                                height: 300,
+                                height: 200,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     color: Colors.yellowAccent,
                                     borderRadius: BorderRadius.circular(10)),
-                                child: Row(
-                                  children: [
-                                    Image.asset(''),
-                                    const Text(''),
-                                    const Icon(Icons.forward)
-                                  ],
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'images/dt.png',
+                                        height: 70,
+                                        width: 50,
+                                      ),
+                                      const SizedBox(
+                                        width: 15,
+                                      ),
+                                      Column(
+                                        children: const [
+                                          Text(
+                                            'General Physician',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 25,
+                                          ),
+                                          Text(
+                                              'Lorem ipsum is placeholder text commonly \n used in the graphic')
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        width: 15,
+                                      ),
+                                      const Icon(Icons.arrow_forward_ios)
+                                    ],
+                                  ),
                                 )),
                           ),
                           Container(
