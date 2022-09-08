@@ -41,8 +41,12 @@ class DoctorsHome extends StatelessWidget {
           Expanded(
               child: ListView.builder(
                   itemCount: 7,
-                  itemBuilder: ((context, index) =>
-                      Column(children: const [CardWithColum(), SecondCard()]))))
+                  itemBuilder: ((context, index) => Column(children: [
+                        CardWithColum(
+                          press: () {},
+                        ),
+                        const SecondCard()
+                      ]))))
         ],
       ),
     );
