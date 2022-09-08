@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_care/Doctors_List/doctors_details.dart';
 import 'package:health_care/Doctors_List/first_card.dart';
 import 'package:health_care/Doctors_List/second_card.dart';
 
@@ -43,9 +44,17 @@ class DoctorsHome extends StatelessWidget {
                   itemCount: 7,
                   itemBuilder: ((context, index) => Column(children: [
                         CardWithColum(
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) =>
+                                        const DoctorDetails())));
+                          },
                         ),
-                        const SecondCard()
+                        SecondCard(
+                          press: () {},
+                        )
                       ]))))
         ],
       ),
