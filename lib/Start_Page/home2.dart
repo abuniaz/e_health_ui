@@ -52,22 +52,23 @@ class HomeTwo extends StatelessWidget {
         child: ListView(
           children: [
             DrawerHeader(
-                decoration: const BoxDecoration(color: Colors.blue),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    CircleAvatar(
-                      radius: 33,
-                    ),
-                    Text(
-                      'Abu Niaz',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                    Text('017xxxxxx21', style: TextStyle(color: Colors.black)),
-                    Text('abuniaz2000@gmail.com',
-                        style: TextStyle(color: Colors.black))
-                  ],
-                )),
+              decoration: const BoxDecoration(color: Colors.blue),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  CircleAvatar(
+                    radius: 33,
+                  ),
+                  Text(
+                    'Abu Niaz',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
+                  ),
+                  Text('017xxxxxx21', style: TextStyle(color: Colors.black)),
+                  Text('abuniaz2000@gmail.com',
+                      style: TextStyle(color: Colors.black))
+                ],
+              ),
+            ),
             ListTile(
               title: Row(
                 children: const [

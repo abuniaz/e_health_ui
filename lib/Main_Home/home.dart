@@ -20,8 +20,10 @@ class Homepage extends StatelessWidget {
             const Spacer(),
             BottonWidget(
               press: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const FirstPage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FirstPage()),
+                );
               },
               text: "Continue",
             ),
