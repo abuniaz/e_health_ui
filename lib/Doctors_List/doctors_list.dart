@@ -40,22 +40,27 @@ class DoctorsHome extends StatelessWidget {
             ),
           ),
           Expanded(
-              child: ListView.builder(
-                  itemCount: 7,
-                  itemBuilder: ((context, index) => Column(children: [
-                        CardWithColum(
-                          press: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: ((context) =>
-                                        const DoctorDetails())));
-                          },
-                        ),
-                        SecondCard(
-                          press: () {},
-                        )
-                      ]))))
+            child: ListView.builder(
+              itemCount: 7,
+              itemBuilder: ((context, index) => Column(
+                    children: [
+                      CardWithColum(
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => const DoctorDetails()),
+                            ),
+                          );
+                        },
+                      ),
+                      SecondCard(
+                        press: () {},
+                      )
+                    ],
+                  )),
+            ),
+          ),
         ],
       ),
     );
