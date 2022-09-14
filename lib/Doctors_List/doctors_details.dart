@@ -15,6 +15,7 @@ class DoctorDetails extends StatelessWidget {
             width: double.infinity,
             child: Column(
               children: [
+                const SizedBox(height: 20),
                 Row(
                   children: const [
                     Icon(
