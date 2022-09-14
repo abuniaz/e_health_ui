@@ -23,6 +23,7 @@ class DoctorDetails extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
@@ -33,8 +34,8 @@ class DoctorDetails extends StatelessWidget {
                       title: 'Filter',
                     ),
                     ABoxDecoration(
-                      icon: Icon(Icons.filter_list),
-                      title: ' ',
+                      icon: Icon(Icons.arrow_downward),
+                      title: 'Sort by',
                     ),
                   ],
                 ),
@@ -59,16 +60,20 @@ class ABoxDecoration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(width: 1),
       ),
-      child: Row(
-        children: [
-          icon,
-          Text(title, style: const TextStyle(fontSize: 12, color: Colors.black))
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            icon,
+            const SizedBox(width: 7),
+            Text(title,
+                style: const TextStyle(fontSize: 12, color: Colors.black))
+          ],
+        ),
       ),
     );
   }
