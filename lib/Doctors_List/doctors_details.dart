@@ -25,22 +25,17 @@ class DoctorDetails extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const Text('100 doctors found for medicine',
+                  children: const [
+                    Text('100 doctors found for medicine',
                         style: TextStyle(fontSize: 16, color: Colors.black)),
-                    Container(
-                      height: 40,
-                      width: 70,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: const [
-                          Icon(Icons.filter_list_outlined),
-                          Text('Filter')
-                        ],
-                      ),
-                    )
+                    ABoxDecoration(
+                      icon: Icon(Icons.filter_list),
+                      title: 'Filter',
+                    ),
+                    ABoxDecoration(
+                      icon: Icon(Icons.filter_list),
+                      title: ' ',
+                    ),
                   ],
                 ),
               ],
@@ -48,6 +43,33 @@ class DoctorDetails extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class ABoxDecoration extends StatelessWidget {
+  const ABoxDecoration({
+    Key? key,
+    required this.title,
+    required this.icon,
+  }) : super(key: key);
+  final String title;
+  final Icon icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(width: 1),
+      ),
+      child: Row(
+        children: [
+          icon,
+          Text(title, style: const TextStyle(fontSize: 12, color: Colors.black))
+        ],
+      ),
     );
   }
 }
