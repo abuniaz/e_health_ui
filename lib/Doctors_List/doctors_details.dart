@@ -16,22 +16,33 @@ class DoctorDetails extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  children: [
-                    const Icon(
+                  children: const [
+                    Icon(
                       Icons.arrow_back,
                       color: Colors.black,
                     ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const Text('100 doctors found for medicine',
+                        style: TextStyle(fontSize: 16, color: Colors.black)),
                     Container(
-                      height: 45,
-                      width: double.infinity,
-                      color: const Color.fromARGB(172, 255, 255, 255),
-                      child: TextFormField(
-                        decoration: const InputDecoration(
-                            hintText: "Search by doctor's name"),
+                      height: 40,
+                      width: 70,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: const [
+                          Icon(Icons.filter_list_outlined),
+                          Text('Filter')
+                        ],
                       ),
                     )
                   ],
-                )
+                ),
               ],
             ),
           ),
