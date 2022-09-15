@@ -17,11 +17,22 @@ class DoctorDetails extends StatelessWidget {
               children: [
                 const SizedBox(height: 20),
                 Row(
-                  children: const [
-                    Icon(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const Icon(
                       Icons.arrow_back,
                       color: Colors.black,
                     ),
+                    Container(
+                      height: 45,
+                      width: 300,
+                      decoration: BoxDecoration(
+                          color: Colors.teal,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: const TextField(
+                          decoration: InputDecoration(
+                              hintText: "Search doctor's name")),
+                    )
                   ],
                 ),
                 const SizedBox(height: 20),
