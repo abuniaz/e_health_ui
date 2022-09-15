@@ -31,6 +31,7 @@ class DoctorDetails extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10)),
                       child: const TextField(
                           decoration: InputDecoration(
+                              border: OutlineInputBorder(),
                               hintText: "Search doctor's name")),
                     )
                   ],
