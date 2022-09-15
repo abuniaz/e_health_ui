@@ -37,9 +37,17 @@ class Body1 extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: "Email",
                       hintText: "Inter your email",
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          gapPadding: 4),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(color: Colors.blue),
+                        gapPadding: 4,
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -47,9 +55,17 @@ class Body1 extends StatelessWidget {
                   ),
                   TextFormField(
                     obscureText: true,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: "Password",
                       hintText: "Inter your password",
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          gapPadding: 4),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: const BorderSide(color: Colors.blue),
+                        gapPadding: 4,
+                      ),
                     ),
                   ),
                   const CheckBox(),

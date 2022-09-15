@@ -25,53 +25,124 @@ class MainSignUp extends StatelessWidget {
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(labelText: "First Name"),
+                  decoration: InputDecoration(
+                    labelText: "First Name",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(labelText: "Last Name"),
+                  decoration: InputDecoration(
+                    labelText: "Last Name",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(labelText: "Phone Number"),
+                  decoration: InputDecoration(
+                    labelText: "Phone Number",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  decoration: const InputDecoration(labelText: "Email Address"),
+                  decoration: InputDecoration(
+                    labelText: "Email Address",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(labelText: "Sex"),
+                  decoration: InputDecoration(
+                    labelText: "Sex",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(labelText: "Old"),
+                  decoration: InputDecoration(
+                    labelText: "Old",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(labelText: "Password"),
+                  decoration: InputDecoration(
+                    labelText: "Password",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  decoration:
-                      const InputDecoration(labelText: "Confirm Password"),
+                  decoration: InputDecoration(
+                    labelText: "Confirm Password",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,

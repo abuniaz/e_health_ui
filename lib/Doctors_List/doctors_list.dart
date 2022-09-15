@@ -33,9 +33,17 @@ class DoctorsHome extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.grey, borderRadius: BorderRadius.circular(20)),
               child: TextFormField(
-                decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.search),
-                    hintText: 'Search Department'),
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(Icons.search),
+                  hintText: 'Search Department',
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20), gapPadding: 4),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: const BorderSide(color: Colors.blue),
+                    gapPadding: 4,
+                  ),
+                ),
               ),
             ),
           ),

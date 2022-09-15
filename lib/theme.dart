@@ -20,16 +20,9 @@ ThemeData theme() {
     textTheme: const TextTheme(
         bodyText1: TextStyle(color: kTextColor),
         bodyText2: TextStyle(color: kTextColor)),
-    inputDecorationTheme: InputDecorationTheme(
+    inputDecorationTheme: const InputDecorationTheme(
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-        enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20), gapPadding: 4),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(color: Colors.blue),
-          gapPadding: 4,
-        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         focusColor: Colors.blue),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
