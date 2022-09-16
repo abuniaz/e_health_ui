@@ -64,6 +64,7 @@ class DoctorDetails extends StatelessWidget {
             height: 10,
           ),
           Container(
+            padding: const EdgeInsets.all(8.0),
             height: 200,
             width: double.infinity,
             decoration: BoxDecoration(
@@ -74,19 +75,32 @@ class DoctorDetails extends StatelessWidget {
                 Column(
                   children: [
                     Image.asset(
-                      '',
-                      height: 80,
+                      'images/D1.png',
+                      height: 100,
                       width: 60,
+                    ),
+                    const SizedBox(
+                      height: 5,
                     ),
                     Row(
                       children: const [
                         Icon(
                           Icons.star,
                           size: 20,
-                          color: Colors.pink,
+                          color: Colors.yellow,
                         ),
-                        Text('4.8'),
-                        Text('(1,254)')
+                        Text(
+                          '4.8',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text('(1,254)',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                            ))
                       ],
                     )
                   ],
