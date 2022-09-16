@@ -10,70 +10,63 @@ class DoctorDetails extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: Card(
-              elevation: 5,
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.001,
-                child: Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        const Icon(
-                          Icons.arrow_back,
-                          color: Colors.black,
+          Card(
+            elevation: 5,
+            child: Container(
+              height: 150,
+              decoration: const BoxDecoration(),
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                      ),
+                      Container(
+                        height: 45,
+                        width: 300,
+                        decoration: BoxDecoration(
+                            color: Colors.teal,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              hintText: "Search doctor's name"),
                         ),
-                        Container(
-                          height: 45,
-                          width: 300,
-                          decoration: BoxDecoration(
-                              color: Colors.teal,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: TextField(
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                hintText: "Search doctor's name"),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
-                        Text('100 doctors found for medicine',
-                            style:
-                                TextStyle(fontSize: 16, color: Colors.black)),
-                        ABoxDecoration(
-                          icon: Icon(Icons.filter_list),
-                          title: 'Filter',
-                        ),
-                        ABoxDecoration(
-                          icon: Icon(Icons.arrow_downward),
-                          title: 'Sort by',
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: const [
+                      Text('100 doctors found for medicine',
+                          style: TextStyle(fontSize: 16, color: Colors.black)),
+                      ABoxDecoration(
+                        icon: Icon(Icons.filter_list),
+                        title: 'Filter',
+                      ),
+                      ABoxDecoration(
+                        icon: Icon(Icons.arrow_downward),
+                        title: 'Sort by',
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
           const SizedBox(
             height: 10,
           ),
-          Expanded(
-            child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: ((context, index) => Container(
-                      padding: const EdgeInsets.all(10),
-                      height: 300,
-                      width: double.infinity,
-                      color: Colors.yellow,
-                    ))),
+          Container(
+            height: 100,
+            width: 300,
+            color: Colors.red,
           )
         ],
       ),
