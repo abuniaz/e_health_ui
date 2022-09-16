@@ -35,7 +35,7 @@ class DoctorDetails extends StatelessWidget {
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              hintText: "Search doctor's name"),
+                              hintText: "Search by doctor's name"),
                         ),
                       )
                     ],
@@ -64,9 +64,37 @@ class DoctorDetails extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 100,
-            width: 300,
-            color: Colors.red,
+            height: 200,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Image.asset(
+                      '',
+                      height: 80,
+                      width: 60,
+                    ),
+                    Row(
+                      children: const [
+                        Icon(
+                          Icons.star,
+                          size: 20,
+                          color: Colors.pink,
+                        ),
+                        Text('4.8'),
+                        Text('(1,254)')
+                      ],
+                    )
+                  ],
+                ),
+                Column(),
+                Column()
+              ],
+            ),
           )
         ],
       ),
