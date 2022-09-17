@@ -134,10 +134,22 @@ class DoctorDetails extends StatelessWidget {
                         Text('Bangladesh Bar Association',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black))
+                                color: Colors.black)),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          '60 BDT(inc.vat)',
+                          style: TextStyle(color: Colors.black),
+                        )
                       ],
                     ),
-                    Column()
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(Icons.arrow_forward_ios),
+                      ],
+                    )
                   ],
                 ),
               ),
