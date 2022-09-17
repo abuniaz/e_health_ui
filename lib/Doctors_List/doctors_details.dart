@@ -69,59 +69,74 @@ class DoctorDetails extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
                 color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Image.asset(
-                      'images/D1.png',
-                      height: 100,
-                      width: 60,
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.star,
-                          size: 20,
-                          color: Colors.yellow,
-                        ),
-                        Text(
-                          '4.8',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text('(1,254)',
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Image.asset(
+                        'images/D1.png',
+                        height: 100,
+                        width: 60,
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Row(
+                        children: const [
+                          Icon(
+                            Icons.star,
+                            size: 20,
+                            color: Colors.yellow,
+                          ),
+                          Text(
+                            '4.8',
                             style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.black,
-                            ))
-                      ],
-                    )
-                  ],
-                ),
-                Column(
-                  children: const [
-                    Text(
-                      'Dr. Golam Muodud Ahmed',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text('MBBS'),
-                    Text(
-                      'General Physician',
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                    Text('Bangladesh Bar Association',
-                        style: TextStyle(fontWeight: FontWeight.bold))
-                  ],
-                ),
-                Column()
-              ],
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text('(1,254)',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.black,
+                              ))
+                        ],
+                      )
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Dr. Golam Muodud Ahmed',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text('MBBS', style: TextStyle(color: Colors.black)),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'General Physician',
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text('Bangladesh Bar Association',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.black))
+                    ],
+                  ),
+                  Column()
+                ],
+              ),
             ),
           )
         ],
