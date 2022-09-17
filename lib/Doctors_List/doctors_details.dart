@@ -114,11 +114,13 @@ class DoctorsName extends StatelessWidget {
                             color: Colors.black,
                             fontWeight: FontWeight.bold),
                       ),
-                      Text('(1,254)',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black,
-                          ))
+                      Text(
+                        '(1,254)',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                        ),
+                      )
                     ],
                   )
                 ],
