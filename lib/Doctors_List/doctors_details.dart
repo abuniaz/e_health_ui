@@ -105,7 +105,21 @@ class DoctorDetails extends StatelessWidget {
                     )
                   ],
                 ),
-                Column(),
+                Column(
+                  children: const [
+                    Text(
+                      'Dr. Golam Muodud Ahmed',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text('MBBS'),
+                    Text(
+                      'General Physician',
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    Text('Bangladesh Bar Association',
+                        style: TextStyle(fontWeight: FontWeight.bold))
+                  ],
+                ),
                 Column()
               ],
             ),
