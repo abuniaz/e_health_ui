@@ -173,8 +173,9 @@ class DoctorsName extends StatelessWidget {
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.arrow_forward_ios),
+                children: [
+                  GestureDetector(
+                      onTap: () {}, child: const Icon(Icons.arrow_forward_ios)),
                 ],
               )
             ],
