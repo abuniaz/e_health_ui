@@ -36,7 +36,8 @@ class DoctorDetails extends StatelessWidget {
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              hintText: "Search by doctor's name"),
+                              hintText: "Search by doctor's name",
+                              prefixIcon: const Icon(Icons.search)),
                         ),
                       )
                     ],
@@ -65,20 +66,21 @@ class DoctorDetails extends StatelessWidget {
             height: 10,
           ),
           Expanded(
-              child: SingleChildScrollView(
-            child: Column(
-              children: const [
-                DoctorsName(),
-                DoctorsName(),
-                DoctorsName(),
-                DoctorsName(),
-                DoctorsName(),
-                DoctorsName(),
-                DoctorsName(),
-                DoctorsName(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: const [
+                  DoctorsName(),
+                  DoctorsName(),
+                  DoctorsName(),
+                  DoctorsName(),
+                  DoctorsName(),
+                  DoctorsName(),
+                  DoctorsName(),
+                  DoctorsName(),
+                ],
+              ),
             ),
-          ))
+          )
         ],
       ),
     );
