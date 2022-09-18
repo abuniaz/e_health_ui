@@ -63,7 +63,21 @@ class DoctorDetails extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const DoctorsName()
+          Expanded(
+              child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                DoctorsName(),
+                DoctorsName(),
+                DoctorsName(),
+                DoctorsName(),
+                DoctorsName(),
+                DoctorsName(),
+                DoctorsName(),
+                DoctorsName(),
+              ],
+            ),
+          ))
         ],
       ),
     );
