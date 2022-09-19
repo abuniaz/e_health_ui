@@ -16,24 +16,21 @@ class HomeTwo extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.circle),
+            icon: const Icon(Icons.account_circle),
           ),
         ],
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.teal[300],
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.grey,
+        color: Colors.teal[300],
         child: Column(
           children: [
             Container(
               height: 150,
               width: 500,
-              decoration: BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.circular(20),
-              ),
+              decoration: const BoxDecoration(),
               child: const Center(
                 child: Text(
                   'Choose A Categories &\n   Find the Specialists ',
