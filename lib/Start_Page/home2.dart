@@ -60,9 +60,14 @@ class HomeTwo extends StatelessWidget {
                     'Abu Niaz',
                     style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
-                  Text('017xxxxxx21', style: TextStyle(color: Colors.black)),
-                  Text('abuniaz2000@gmail.com',
-                      style: TextStyle(color: Colors.black))
+                  Text(
+                    '017xxxxxx21',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    'abuniaz2000@gmail.com',
+                    style: TextStyle(color: Colors.black),
+                  )
                 ],
               ),
             ),
