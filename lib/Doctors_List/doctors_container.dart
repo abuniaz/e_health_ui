@@ -66,7 +66,10 @@ class DoctorsName extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text('MBBS', style: TextStyle(color: Colors.black)),
+                  Text(
+                    'MBBS',
+                    style: TextStyle(color: Colors.black),
+                  ),
                   SizedBox(
                     height: 10,
                   ),
@@ -77,9 +80,11 @@ class DoctorsName extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text('Bangladesh Bar Association',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black)),
+                  Text(
+                    'Bangladesh Bar Association',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.black),
+                  ),
                   Spacer(),
                   Text(
                     '60 BDT(inc.vat)',
@@ -91,7 +96,9 @@ class DoctorsName extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                      onTap: () {}, child: const Icon(Icons.arrow_forward_ios)),
+                    onTap: () {},
+                    child: const Icon(Icons.arrow_forward_ios),
+                  ),
                 ],
               )
             ],
