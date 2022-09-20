@@ -1,10 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:health_care/Doctors_List/doctors_list.dart';
+
 import 'package:health_care/Start_Page/drawer_site.dart';
 import 'package:health_care/Start_Page/row_with_fea_One.dart';
 
-class HomeTwo extends StatelessWidget {
+class HomeTwo extends StatefulWidget {
   const HomeTwo({Key? key}) : super(key: key);
+
+  @override
+  State<HomeTwo> createState() => _HomeTwoState();
+}
+
+class _HomeTwoState extends State<HomeTwo> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Settings',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +61,27 @@ class HomeTwo extends StatelessWidget {
         color: Colors.teal[300],
         child: Column(
           children: [
-            Container(
-              height: 150,
-              width: 500,
-              decoration: const BoxDecoration(),
-              child: const Center(
-                child: Text(
-                  'Choose A Categories &\n   Find the Specialists ',
-                  style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(left: 25, right: 25),
+              child: Container(
+                decoration: const BoxDecoration(),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Search by doctor's name or spacialty",
+                    suffixIcon: const Icon(Icons.search),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10), gapPadding: 4),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(color: Colors.blue),
+                      gapPadding: 4,
+                    ),
+                  ),
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             const RowWithFeatureOne()
           ],
@@ -48,6 +89,33 @@ class HomeTwo extends StatelessWidget {
       ),
       drawer: const Drawer(
         child: DrawerListview(),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+            backgroundColor: Colors.green,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+            backgroundColor: Colors.purple,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+            backgroundColor: Colors.pink,
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
     );
   }
