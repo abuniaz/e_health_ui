@@ -20,15 +20,15 @@ class _HomeTwoState extends State<HomeTwo> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: History',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Find Doctor',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      'Index 3: Subscription',
       style: optionStyle,
     ),
   ];
@@ -95,22 +95,22 @@ class _HomeTwoState extends State<HomeTwo> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.red,
+            backgroundColor: Color.fromARGB(255, 10, 14, 238),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.article),
+            label: 'History',
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.person),
+            label: 'Find Doctor',
             backgroundColor: Colors.purple,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.pink,
+            icon: Icon(Icons.subscriptions_rounded),
+            label: 'Subcription',
+            backgroundColor: Color.fromARGB(255, 92, 42, 42),
           ),
         ],
         currentIndex: _selectedIndex,
