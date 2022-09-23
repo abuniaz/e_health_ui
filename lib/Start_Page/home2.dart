@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:health_care/Start_Page/drawer_site.dart';
 import 'package:health_care/Start_Page/row_with_fea_One.dart';
+import 'package:health_care/Start_Page/search_bar.dart';
 
 class HomeTwo extends StatefulWidget {
   const HomeTwo({Key? key}) : super(key: key);
@@ -60,30 +61,12 @@ class _HomeTwoState extends State<HomeTwo> {
         width: double.infinity,
         color: Colors.teal[300],
         child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25),
-              child: Container(
-                decoration: const BoxDecoration(),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Search by doctor's name or spacialty",
-                    suffixIcon: const Icon(Icons.search),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10), gapPadding: 4),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.blue),
-                      gapPadding: 4,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
+          children: const [
+            SearchBar(),
+            SizedBox(
               height: 20,
             ),
-            const RowWithFeatureOne()
+            RowWithFeatureOne()
           ],
         ),
       ),
