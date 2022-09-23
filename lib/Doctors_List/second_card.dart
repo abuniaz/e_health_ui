@@ -17,8 +17,9 @@ class SecondCard extends StatelessWidget {
           height: 200,
           width: double.infinity,
           decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 54, 89, 244),
-              borderRadius: BorderRadius.circular(10)),
+            color: const Color.fromARGB(255, 54, 89, 244),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Row(
