@@ -148,13 +148,16 @@ class MainSignUp extends StatelessWidget {
                   height: 20,
                 ),
                 BottonWidget(
-                    text: "Sign Up",
-                    press: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Body1()));
-                    }),
+                  text: "Sign Up",
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Body1(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
