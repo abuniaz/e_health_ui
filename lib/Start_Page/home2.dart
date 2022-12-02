@@ -21,15 +21,15 @@ class _HomeTwoState extends State<HomeTwo> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: History',
+      'Index 1: Find Doctor',
       style: optionStyle,
     ),
     Text(
-      'Index 2: Find Doctor',
+      'Index 2: Department',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Subscription',
+      'Index 3: History',
       style: optionStyle,
     ),
   ];
@@ -45,7 +45,7 @@ class _HomeTwoState extends State<HomeTwo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Categories',
+          'E_Health',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -60,14 +60,135 @@ class _HomeTwoState extends State<HomeTwo> {
         height: double.infinity,
         width: double.infinity,
         color: Colors.teal[300],
-        child: Column(
-          children: const [
-            SearchBar(),
-            SizedBox(
-              height: 20,
-            ),
-            RowWithFeatureOne()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              //const SearchBar(),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.blue.shade100,
+                    suffixIcon: Icon(Icons.search),
+                    hintText: 'Search your Specialist',
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: const BorderSide(
+                        color: Colors.green,
+                        width: 1.0,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: const BorderSide(
+                        color: Colors.purple,
+                        width: 2.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 380,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 23,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Content(
+                              onTab: () {},
+                              pic: '',
+                              title: '',
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
       drawer: const Drawer(
@@ -78,27 +199,62 @@ class _HomeTwoState extends State<HomeTwo> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Color.fromARGB(255, 10, 14, 238),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.article),
-            label: 'History',
-            backgroundColor: Colors.green,
+            backgroundColor: Color.fromARGB(83, 10, 14, 238),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Find Doctor',
-            backgroundColor: Colors.purple,
+            label: 'Doctor List',
+            backgroundColor: Color.fromARGB(186, 19, 48, 41),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.subscriptions_rounded),
-            label: 'Subcription',
+            icon: Icon(Icons.article),
+            label: 'Department',
+            backgroundColor: Colors.green,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.history_edu),
+            label: 'History',
             backgroundColor: Color.fromARGB(255, 92, 42, 42),
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+class Content extends StatelessWidget {
+  Content({
+    Key? key,
+    required this.onTab,
+    required this.pic,
+    required this.title,
+  }) : super(key: key);
+  String pic;
+  String title;
+  final Function() onTab;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTab,
+      child: Container(
+        height: 150,
+        width: 120,
+        decoration: BoxDecoration(
+            color: Colors.red, borderRadius: BorderRadius.circular(10)),
+        child: Column(
+          children: [
+            Image.asset(
+              '',
+              height: 75,
+              width: 120,
+            ),
+            const Text('')
+          ],
+        ),
       ),
     );
   }

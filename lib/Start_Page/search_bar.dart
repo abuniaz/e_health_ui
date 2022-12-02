@@ -9,18 +9,24 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 25, right: 25),
-      child: Container(
-        decoration: const BoxDecoration(),
-        child: TextFormField(
-          decoration: InputDecoration(
-            hintText: "Search by doctor's name or spacialty",
-            suffixIcon: const Icon(Icons.search),
-            enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10), gapPadding: 4),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: Colors.blue),
-              gapPadding: 4,
+      child: TextField(
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.blue.shade100,
+          suffixIcon: Icon(Icons.search),
+          hintText: 'Search your Specialist',
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: const BorderSide(
+              color: Colors.green,
+              width: 1.0,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: const BorderSide(
+              color: Colors.purple,
+              width: 2.0,
             ),
           ),
         ),
