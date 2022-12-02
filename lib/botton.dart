@@ -12,8 +12,8 @@ class BottonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      onPressed: press,
+    return GestureDetector(
+      onTap: press,
       child: Container(
         height: 50,
         width: 170,
