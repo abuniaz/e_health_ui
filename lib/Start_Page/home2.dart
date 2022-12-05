@@ -114,7 +114,7 @@ class _HomeTwoState extends State<HomeTwo> {
                           children: [
                             Content(
                               onTab: () {},
-                              pic: '',
+                              pic: 'images/medi1.jpg',
                               title: '',
                             ),
                             const SizedBox(
@@ -122,7 +122,7 @@ class _HomeTwoState extends State<HomeTwo> {
                             ),
                             Content(
                               onTab: () {},
-                              pic: '',
+                              pic: 'images/chil1.png',
                               title: '',
                             ),
                             const SizedBox(

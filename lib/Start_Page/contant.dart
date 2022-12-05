@@ -22,10 +22,13 @@ class Content extends StatelessWidget {
             color: Colors.red, borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
+            const SizedBox(
+              height: 3,
+            ),
             Image.asset(
               pic,
               height: 75,
-              width: 120,
+              width: double.infinity,
             ),
             Text(title)
           ],

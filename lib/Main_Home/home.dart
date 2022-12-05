@@ -13,7 +13,7 @@ class Homepage extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              "images/H1.jpg",
+              "images/M.jpg",
               height: 300,
               width: double.infinity,
             ),
