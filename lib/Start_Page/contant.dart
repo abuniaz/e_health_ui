@@ -19,7 +19,7 @@ class Content extends StatelessWidget {
         height: 150,
         width: 120,
         decoration: BoxDecoration(
-            color: Colors.red, borderRadius: BorderRadius.circular(10)),
+            color: Colors.white, borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
             const SizedBox(
@@ -29,8 +29,10 @@ class Content extends StatelessWidget {
               pic,
               height: 75,
               width: double.infinity,
+            ),const SizedBox(
+              height: 6,
             ),
-            Text(title)
+            Center(child: Text(title))
           ],
         ),
       ),
