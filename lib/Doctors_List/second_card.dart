@@ -4,8 +4,10 @@ class SecondCard extends StatelessWidget {
   const SecondCard({
     Key? key,
     required this.press,
+    required this.title,
   }) : super(key: key);
   final Function() press;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +25,10 @@ class SecondCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Image.asset(
-                  'images/dt.png',
+                  'images/nu.png',
                   height: 70,
                   width: 50,
                 ),
@@ -35,19 +36,20 @@ class SecondCard extends StatelessWidget {
                   width: 15,
                 ),
                 Column(
-                  children: const [
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     Text(
-                      'General Physician',
-                      style: TextStyle(
-                          fontSize: 20,
+                      title,
+                      style: const TextStyle(
+                          fontSize: 16,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    Text(
-                      'Lorem ipsum is placeholder text commonly \n used in the graphic',
+                    const Text(
+                      'Lorem ipsum is placeholder\n text commonly used in the \ngraphic',
                       style: TextStyle(color: Colors.black),
                     )
                   ],

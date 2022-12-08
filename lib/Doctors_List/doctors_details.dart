@@ -34,15 +34,16 @@ class DoctorDetails extends StatelessWidget {
                       Container(
                         height: 45,
                         width: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.teal,
-                            borderRadius: BorderRadius.circular(10)),
                         child: TextField(
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10)),
+                              prefixIcon: const Icon(Icons.search),
                               hintText: "Search by doctor's name",
-                              prefixIcon: const Icon(Icons.search)),
+                              filled: true,
+                              fillColor: Colors.blue.shade100,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide.none,
+                              )),
                         ),
                       )
                     ],

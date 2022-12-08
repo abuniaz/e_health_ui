@@ -4,8 +4,10 @@ class CardWithColum extends StatelessWidget {
   const CardWithColum({
     Key? key,
     required this.press,
+    required this.title,
   }) : super(key: key);
   final Function() press;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class CardWithColum extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/dt.png',
+                  'images/car.png',
                   height: 70,
                   width: 50,
                 ),
@@ -34,20 +36,21 @@ class CardWithColum extends StatelessWidget {
                   width: 15,
                 ),
                 Column(
-                  children: const [
+                  children: [
                     Text(
-                      'General Physician',
-                      style: TextStyle(
-                          fontSize: 20,
+                      title,
+                      style: const TextStyle(
+                          fontSize: 15,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    Text(
-                        'Lorem ipsum is placeholder text commonly \n used in the graphic',
-                        style: TextStyle(color: Colors.black))
+                    const Text(
+                      'Lorem ipsum is placeholder\n text commonly used in the \ngraphic',
+                      style: TextStyle(color: Colors.black),
+                    )
                   ],
                 ),
                 const SizedBox(

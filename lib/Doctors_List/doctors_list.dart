@@ -12,7 +12,7 @@ class DoctorsHome extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
           const Center(
             child: Text(
@@ -26,23 +26,22 @@ class DoctorsHome extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Center(
-            child: Container(
-              height: 50,
-              width: 300,
-              decoration: BoxDecoration(
-                  color: Colors.grey, borderRadius: BorderRadius.circular(20)),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.search),
-                  hintText: 'Search Department',
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20), gapPadding: 4),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: const BorderSide(color: Colors.blue),
-                    gapPadding: 4,
-                  ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Center(
+              child: Container(
+                height: 50,
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.search),
+                      hintText: 'Search department',
+                      filled: true,
+                      fillColor: Colors.blue.shade100,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      )),
                 ),
               ),
             ),
@@ -61,9 +60,11 @@ class DoctorsHome extends StatelessWidget {
                             ),
                           );
                         },
+                        title: 'Cardiology Department',
                       ),
                       SecondCard(
                         press: () {},
+                        title: 'Neurology Department',
                       )
                     ],
                   )),
