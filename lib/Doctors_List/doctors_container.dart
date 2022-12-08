@@ -8,7 +8,7 @@ class DoctorsName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(6.0),
       child: Container(
         height: 200,
         width: double.infinity,
@@ -16,9 +16,10 @@ class DoctorsName extends StatelessWidget {
             color: const Color.fromARGB(181, 131, 217, 238),
             borderRadius: BorderRadius.circular(10)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 children: [
@@ -27,30 +28,42 @@ class DoctorsName extends StatelessWidget {
                     height: 100,
                     width: 60,
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  // const SizedBox(
+                  //   height: 5,
+                  // ),
                   Row(
-                    children: const [
-                      Icon(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(
                         Icons.star,
                         size: 20,
                         color: Colors.yellow,
                       ),
-                      Text(
-                        '4.8',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
+                      Column(
+                        children: const [
+                          Text(
+                            '4.8',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            '(1,254)',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          )
+                        ],
                       ),
-                      Text(
-                        '(1,254)',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      )
+                      // Text(
+                      //   '(1,254)',
+                      //   style: TextStyle(
+                      //     fontSize: 14,
+                      //     color: Colors.black,
+                      //   ),
+                      // )
                     ],
                   )
                 ],
@@ -81,14 +94,19 @@ class DoctorsName extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'Bangladesh Bar Association',
+                    'Bangladesh Bar \nAssociation',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.black),
                   ),
-                  Spacer(),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     '60 BDT(inc.vat)',
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                   )
                 ],
               ),

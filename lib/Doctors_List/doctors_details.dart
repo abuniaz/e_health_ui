@@ -18,13 +18,18 @@ class DoctorDetails extends StatelessWidget {
               decoration: const BoxDecoration(),
               child: Column(
                 children: [
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const Icon(
-                        Icons.arrow_back,
-                        color: Colors.black,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.black,
+                        ),
                       ),
                       Container(
                         height: 45,
@@ -46,8 +51,11 @@ class DoctorDetails extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
-                      Text('100 doctors found for medicine',
-                          style: TextStyle(fontSize: 16, color: Colors.black)),
+                      Text('100 doctors found \nfor medicine',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold)),
                       ABoxDecoration(
                         icon: Icon(Icons.filter_list),
                         title: 'Filter',
