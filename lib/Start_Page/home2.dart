@@ -97,26 +97,34 @@ class _HomeTwoState extends State<HomeTwo> {
               const SizedBox(
                 height: 20,
               ),
-              MainContant(),
-              Padding(padding: EdgeInsets.all(8),
-              child: Container(
-                height: 210,
-                width: double.infinity,
-                decoration: BoxDecoration(color: Colors.black12,borderRadius: BorderRadius.circular(10)),
-                child:  Padding(
+              const MainContant(),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Container(
+                  height: 210,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Most popular',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                        const Text(
+                          'Most popular',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
                         const SizedBox(
-                         height: 10,
+                          height: 10,
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
-
                               Content(
                                 onTab: () {},
                                 pic: 'images/am.jpeg',
@@ -154,10 +162,6 @@ class _HomeTwoState extends State<HomeTwo> {
                   ),
                 ),
               ),
-
-
-
-
             ],
           ),
         ),
