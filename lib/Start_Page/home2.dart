@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:health_care/Start_Page/contant.dart';
 import 'package:health_care/Start_Page/drawer_site.dart';
+import 'package:health_care/Start_Page/main_contant.dart';
 import 'package:health_care/Start_Page/row_with_fea_One.dart';
 import 'package:health_care/Start_Page/search_bar.dart';
 
@@ -95,66 +97,26 @@ class _HomeTwoState extends State<HomeTwo> {
               const SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 390,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: Colors.black12,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
+              MainContant(),
+              Padding(padding: EdgeInsets.all(8),
+              child: Container(
+                height: 210,
+                width: double.infinity,
+                decoration: BoxDecoration(color: Colors.black12,borderRadius: BorderRadius.circular(10)),
+                child:  Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Our Services',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
+                        Text('Most popular',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
                         const SizedBox(
-                          height: 20,
+                         height: 10,
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
-                              Content(
-                                onTab: () {},
-                                pic: 'images/medi1.jpg',
-                                title: 'Medicine\n  Service',
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Content(
-                                onTab: () {},
-                                pic: 'images/chil1.png',
-                                title: '   Child\nSpecialist',
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Content(
-                                onTab: () {},
-                                pic: 'images/devi.jpeg',
-                                title: '   Devices\n Equipment',
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Content(
-                                onTab: () {},
-                                pic: 'images/skin1.png',
-                                title: 'Skin disease',
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 25,
-                        ),
-                        SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: [
+
                               Content(
                                 onTab: () {},
                                 pic: 'images/am.jpeg',
@@ -191,7 +153,11 @@ class _HomeTwoState extends State<HomeTwo> {
                     ),
                   ),
                 ),
-              )
+              ),
+
+
+
+
             ],
           ),
         ),

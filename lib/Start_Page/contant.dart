@@ -30,9 +30,9 @@ class Content extends StatelessWidget {
               height: 75,
               width: double.infinity,
             ),const SizedBox(
-              height: 6,
+              height: 10,
             ),
-            Center(child: Text(title))
+            Center(child: Text(title,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 13),))
           ],
         ),
       ),
