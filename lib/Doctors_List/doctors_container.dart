@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_care/Doctor_profile/d_main.dart';
 
 class DoctorsName extends StatelessWidget {
   const DoctorsName({
@@ -114,7 +115,12 @@ class DoctorsName extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => const DocProfile())));
+                    },
                     child: const Icon(Icons.arrow_forward_ios),
                   ),
                 ],
