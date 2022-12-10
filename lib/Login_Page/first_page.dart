@@ -20,7 +20,7 @@ class FirstPage extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: const Body1(),
+        body: Body1(),
       ),
     );
   }

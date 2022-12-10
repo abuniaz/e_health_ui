@@ -153,7 +153,7 @@ class MainSignUp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Body1(),
+                        builder: (context) => Body1(),
                       ),
                     );
                   },

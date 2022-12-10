@@ -18,7 +18,7 @@ class Body1 extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(
-                width: double.infinity,
+                height: 60,
               ),
               const Text(
                 "Welcome",
